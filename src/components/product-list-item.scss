@@ -1,0 +1,112 @@
+.grid-item {
+  display: grid;
+  grid-auto-columns: 1fr;
+  place-items: center;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  > * {
+    flex-basis: 15rem;
+  }
+  .text-container p {
+    display: none;
+  }
+  .image-container {
+    height: 5rem;
+    .image {
+      height: 5rem;
+    }
+    .image-button {
+      top: 2.5rem;
+    }
+  }
+}
+
+.grid-item, .list-item {
+  position: relative;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffffcc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #fffd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.image-container {
+  height: 15rem;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.image {
+  height: 15rem;
+  object-fit: contain;
+}
+
+.image-container:hover .image-button {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.image-container:hover .image {
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+
+.image-button {
+  opacity: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  position: absolute;
+  top: 12rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  :hover {
+    display: block;
+  }
+}
+
+.text-container {
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    :hover {
+      color: #000;
+      text-decoration: underline;
+    }
+  }
+  h3 {
+    margin: 0rem;
+  }
+  p {
+    margin: .25rem 0;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 600px) {
+  .list-item {
+    .image-container {
+      height: 10rem;
+      .image {
+        height: 10rem;
+      }
+    }
+  }
+}
