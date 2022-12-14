@@ -1,57 +1,66 @@
 .grid-item {
-  display: grid;
-  grid-auto-columns: 1fr;
-  place-items: center;
+  padding: 1rem 1rem 4rem 1rem;
+  .price {
+    left: 1rem;
+    bottom: -1rem;
+  }
 }
+
 
 .list-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding: 1rem;
+  justify-content: center;
+  gap: 2rem;
   height: 5rem;
-  > * {
-    flex-basis: 15rem;
-  }
   .text-container p {
     display: none;
   }
   .image-container {
     height: 5rem;
     .image {
-      height: 5rem;
+      height: inherit;
     }
     .image-button {
       top: 2.5rem;
+      font-size: 1rem;
     }
+  }
+  .price {
+    top: 0;
+    right: 1rem;
   }
 }
 
 .grid-item, .list-item {
   position: relative;
-  padding: 1rem;
-  border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #ffffffcc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #c40104;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   &:hover {
-    background-color: #fffd;
+  background-color: #bb0003;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out;
   }
+  * {
+    color: #fec306;
+  }
 }
+
 
 .image-container {
-  height: 15rem;
   display: grid;
   place-items: center;
-  overflow: hidden;
+  position: relative;
+  height: 15rem;
+  .image {
+    height: 15rem;
+    object-fit: contain;
+  }
 }
 
-.image {
-  height: 15rem;
-  object-fit: contain;
-}
 
 .image-container:hover .image-button {
   opacity: 1;
@@ -65,12 +74,16 @@
 
 .image-button {
   opacity: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #fec306;
+  border: none;
+  color: #c40104;
+  font-size: 1.2rem;
+  font-weight: 700;
   border-radius: 4px;
   padding: 0.5rem;
   position: absolute;
   top: 12rem;
+  left: 0;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   :hover {
@@ -81,13 +94,11 @@
 .text-container {
   a {
     text-decoration: none;
-    color: #000;
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
     transition: all 0.2s ease-in-out;
     :hover {
-      color: #000;
       text-decoration: underline;
     }
   }
@@ -97,5 +108,35 @@
   p {
     margin: .25rem 0;
     font-weight: 300;
+  }
+}
+
+.price-and-buy-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 1rem;
+  padding: 0rem 1rem;
+  left: 0;
+  width: 100%;
+  .price {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+  }
+  .buy-button {
+    background-color: #fec306;
+    border: none;
+    color: #c40104;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    :hover {
+      background-color: #f9b500;
+    }
   }
 }

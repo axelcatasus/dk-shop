@@ -12,8 +12,8 @@ const IndexPage = ({ data }) => {
     <>
     <Header />
     <main className={main}>
-      <h1>{title}</h1>
       <div className={messageContainer}>
+        <h1>{title}</h1>
         {renderRichText(message)}
       </div>
     </main>

@@ -29,7 +29,10 @@ const ProductListItem = ({ product, currentView }) => {
         </Link>
         <p>{product.node.description}</p>
       </section>
-      <p>Price: {product.node.price} 🍌</p>
+      <section className="price-and-buy-container">
+        <p className="price">{product.node.price} 🍌</p>
+        <button className="buy-button">Buy</button>
+      </section>
       {imageViewUrl && <ImageModal url={imageViewUrl} setImageViewUrl={setImageViewUrl} />}
     </article>
   )
