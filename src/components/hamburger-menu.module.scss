@@ -1,0 +1,23 @@
+.hamburger {
+  cursor: pointer;
+  z-index: 100;
+  width: 100%;
+}
+
+.hamburger-icon, .close-icon {
+  position: absolute;
+  right: 1rem;
+  height: 3rem;
+  width: 3rem;
+  border: none;
+}
+
+.hamburger-icon {
+  background: url('../images/hamburger.svg') no-repeat;
+  background-size: contain;
+}
+
+.close-icon {
+  background: url('../images/close.svg') no-repeat;
+  background-size: contain;
+}
