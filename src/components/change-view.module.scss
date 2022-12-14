@@ -1,26 +1,19 @@
-.change-view-container {
-  background: transparent;
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.25rem;
-}
-
-
 .grid-button, .list-button {
+  border-radius: none;
   background-color: none;
   border: none;
   padding: 0;
   cursor: pointer;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .grid-button {
   background: url(../images/grid.svg) no-repeat center;
-  background-size: 1.5rem
+  background-size: 2rem
 }
 
 .list-button {
   background: url(../images/list.svg) no-repeat center;
-  background-size: 1.5rem
+  background-size: 2rem
 }

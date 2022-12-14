@@ -2,38 +2,38 @@ button {
   border: none;
   background: transparent;
   cursor: pointer;
-  padding: 0;
-  border-radius: 50%;
   color: #C40104;
   font-family: 'Jumpman';
   font-size: 1rem;
+  height: fit-content;
   transition: font-size 0.2s ease-in-out;
 }
 
 .active {
   font-size: 1.5rem;
+  padding: 0 0.5rem;
+  height: fit-content;
+  background: #c40104;
+  color: #fec306;
+  border-radius: 0.5rem;
   transition: font-size 0.2s ease-in-out;
 }
 
-// remove default select and option styles
-
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border: none;
   background: transparent;
   color: #C40104;
   font-family: 'Jumpman';
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding-right: 1rem;
-  margin: 0;
+  margin: 0 0.5rem;
   height: 100%;
   cursor: pointer;
   background-image: url('../images/down-arrow.svg');
-  background-position: right;
+  background-position: right center;
   background-repeat: no-repeat;
-  background-size: 0.75rem;
+  background-size: 1rem;
   text-align: right;
   outline: none;
 }

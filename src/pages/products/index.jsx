@@ -31,10 +31,12 @@ const ProductsPage = ({ data }) => {
       <section className={topSection}>
         <h1>Products</h1>
         {!isMobile && <CategorySelect setCategory={setCategory} selectedCategory={category} />}
+        {!isMobile && <ChangeView setCurrentView={setCurrentView} currentView={currentView} />}
+        {isMobile && 
         <div className={filterSection}>
-          {isMobile && <CategorySelect setCategory={setCategory} selectedCategory={category} />}
+          <CategorySelect setCategory={setCategory} selectedCategory={category} />
           <ChangeView setCurrentView={setCurrentView} currentView={currentView} />
-        </div>
+        </div>}
       </section>
       <ProductList products={filteredProducts} currentView={currentView} />
     </main>

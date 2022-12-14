@@ -11,8 +11,8 @@ const CategorySelect = ({ setCategory, selectedCategory }) => {
       }
     }
   `);
+  
   const categories = data.allContentfulProduct.distinct;
-
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
 

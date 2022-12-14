@@ -6,7 +6,7 @@
 
 .hamburger-icon, .close-icon {
   position: absolute;
-  right: 1rem;
+  right: 2rem;
   height: 3rem;
   width: 3rem;
   border: none;
@@ -18,6 +18,30 @@
 }
 
 .close-icon {
-  background: url('../images/close.svg') no-repeat;
+  background: url('../images/yellow-close.svg') no-repeat;
   background-size: contain;
+}
+
+.mobile-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #c40104;
+  & a {
+    font-size: 3rem;
+    text-align: center;
+    color: #fec306;
+  }
+  a[aria-current="page"] {
+    background: #fec306;
+    color: #c40104;
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+    margin: 0 auto;
+    width: fit-content;
+  }
 }

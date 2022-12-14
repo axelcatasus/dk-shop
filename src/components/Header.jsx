@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import HamburgerMenu from './HamburgerMenu';
-import { header } from './header.module.scss';
+import { header, headerLink} from './header.module.scss';
 import { useMediaQuery } from 'react-responsive';
 
 const Header = () => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
   const data = useStaticQuery(graphql`
     query {
@@ -22,17 +22,16 @@ const Header = () => {
   const { allContentfulPage } = data;
   const { nodes } = allContentfulPage;
   
-
   return (
     <header className={header}>
-      {!isTabletOrMobile && nodes.map((node) => {
+      {!isMobile && nodes.map((node) => {
         return (
-          <Link to={node.pathName} key={node.pathName}>
+          <Link to={node.pathName} key={node.pathName} className={headerLink}>
             {node.navigationAlias}
           </Link>
         )
       })}
-      {isTabletOrMobile && <HamburgerMenu nodes={nodes} />}
+      {isMobile && <HamburgerMenu nodes={nodes} />}
     </header>
   );
 }
