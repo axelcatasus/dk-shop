@@ -7,7 +7,7 @@ const ProductList = ({ products, currentView }) => {
 
   return (
     <section className={currentViewClass}>
-      {products.allContentfulProduct.edges.map((product) =>
+      {products.map((product) =>
         <ProductListItem key={product.node.id} product={product} currentView={currentView} />
       )}
     </section>
