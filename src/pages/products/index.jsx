@@ -5,6 +5,7 @@ import ChangeView from '../../components/ChangeView'
 import CategorySelect from "../../components/CategorySelect"
 import Header from '../../components/Header'
 import { topSection, filterSection } from './products.module.scss'
+import { useMediaQuery } from "react-responsive"
 
 const ProductsPage = ({ data }) => {
   const [currentView, setCurrentView] = React.useState('grid')
@@ -19,6 +20,8 @@ const ProductsPage = ({ data }) => {
       return product.node.category.includes(category)
     }
   })
+
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
   
 
   return (
@@ -27,9 +30,10 @@ const ProductsPage = ({ data }) => {
     <main>
       <section className={topSection}>
         <h1>Products</h1>
+        {!isMobile && <ChangeView setCurrentView={setCurrentView} currentView={currentView} />}
         <div className={filterSection}>
-        <CategorySelect setCategory={setCategory} selectedCategory={category} />
-        <ChangeView setCurrentView={setCurrentView} currentView={currentView} />
+          <CategorySelect setCategory={setCategory} selectedCategory={category} />
+          {isMobile && <ChangeView setCurrentView={setCurrentView} currentView={currentView} />}
         </div>
       </section>
       <ProductList products={filteredProducts} currentView={currentView} />
