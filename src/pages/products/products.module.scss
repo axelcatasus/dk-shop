@@ -8,5 +8,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+}
+
+.products-main {
+  margin: 2.5rem 10rem;
+}
+@media (max-width: 1000px) {
+  .products-main {
+    margin: 2.5rem 1rem;
+  }
 }

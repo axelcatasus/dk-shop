@@ -3,20 +3,22 @@ import { graphql } from 'gatsby'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import Header from '../components/Header'
 import '../scss/main.scss'
-import { main, messageContainer } from './index.module.scss'
 
 const IndexPage = ({ data }) => {
   const { allContentfulPage } = data
-  const { title, message } = allContentfulPage.nodes[0]
+  const { title, message, image } = allContentfulPage.nodes[0]
   return (
     <>
-    <Header />
-    <main className={main}>
-      <div className={messageContainer}>
-        <h1>{title}</h1>
-        {renderRichText(message)}
-      </div>
-    </main>
+      <Header />
+      <main className="page-main">
+        <article className="page-container">
+          <section className="message-section">
+            <h1 className="page-title">{title}</h1>
+            {renderRichText(message)}
+          </section>
+          <img className="page-image" src={image.file.url} alt={title} />
+        </article>
+      </main>
     </>
   )
 }
@@ -27,14 +29,19 @@ export const IndexPageQuery = graphql`
 query IndexPageQuery {
   allContentfulPage(filter: {pathName: {eq: "/"}}) {
     nodes {
+      title
       message {
         raw
       }
+      image {
+        file {
+          url
+        }
+      }
       id
-      title
     }
   }
 }
 `
 
-export const Head = () => <title>DK Shop</title>
+export const Head = ({ data }) => <title>{data.allContentfulPage.nodes[0].title}</title>

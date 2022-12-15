@@ -4,8 +4,7 @@ import ProductList from '../../components/ProductList'
 import ChangeView from '../../components/ChangeView'
 import CategorySelect from "../../components/CategorySelect"
 import Header from '../../components/Header'
-import { topSection, filterSection } from './products.module.scss'
-import { useMediaQuery } from "react-responsive"
+import { topSection, productsMain } from './products.module.scss'
 
 const ProductsPage = ({ data }) => {
   const [currentView, setCurrentView] = React.useState('grid')
@@ -21,22 +20,13 @@ const ProductsPage = ({ data }) => {
     }
   })
 
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
-  
-
   return (
   <>
     <Header />
-    <main>
+    <main className={productsMain}>
       <section className={topSection}>
-        <h1>Products</h1>
-        {!isMobile && <CategorySelect setCategory={setCategory} selectedCategory={category} />}
-        {!isMobile && <ChangeView setCurrentView={setCurrentView} currentView={currentView} />}
-        {isMobile && 
-        <div className={filterSection}>
-          <CategorySelect setCategory={setCategory} selectedCategory={category} />
-          <ChangeView setCurrentView={setCurrentView} currentView={currentView} />
-        </div>}
+        <CategorySelect setCategory={setCategory} selectedCategory={category} />
+        <ChangeView setCurrentView={setCurrentView} currentView={currentView} />
       </section>
       <ProductList products={filteredProducts} currentView={currentView} />
     </main>
@@ -68,4 +58,4 @@ export const ProductsPageQuery = graphql`
   }
 `
 
-export const Head = () => <title>DK Shop</title>
+export const Head = () => <title>Products</title>

@@ -1,7 +1,7 @@
 .grid-item, .list-item {
   padding: 1rem;
   border-radius: 5px;
-  background-color: #c40104;
+  background-color: var(--red);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   &:hover {
@@ -10,7 +10,7 @@
     transition: all 0.2s ease-in-out;
   }
   * {
-    color: #fec306;
+    color: var(--yellow);
   }
 }
 
@@ -52,6 +52,7 @@
   place-items: center;
   .image {
     height: 15rem;
+    width: 100%;
     object-fit: contain;
   }
   .image-button {
@@ -73,9 +74,9 @@
 
 .image-button {
   opacity: 0;
-  background-color: #fec306;
+  background-color: var(--yellow);
   border: none;
-  color: #c40104;
+  color: var(--red);
   font-size: 1.2rem;
   font-weight: 700;
   border-radius: 4px;
@@ -119,9 +120,9 @@
     font-weight: 700;
   }
   .buy-button {
-    background-color: #fec306;
+    background-color: var(--yellow);
     border: none;
-    color: #c40104;
+    color: var(--red);
     font-size: 1.2rem;
     font-weight: 700;
     border-radius: 4px;
@@ -129,7 +130,7 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     :hover {
-      background-color: #f9b500;
+      background-color: var(--yellow);
     }
   }
 }

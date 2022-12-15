@@ -1,3 +1,9 @@
+:root {
+  --red: #c40104;
+  --yellow: #fec306;
+}
+
+
 .hamburger {
   cursor: pointer;
   z-index: 100;
@@ -30,15 +36,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #c40104;
+  background: var(--red);
   & a {
     font-size: 3rem;
     text-align: center;
-    color: #fec306;
+    color: var(--yellow);
+    text-decoration: none;
   }
   a[aria-current="page"] {
-    background: #fec306;
-    color: #c40104;
+    background: var(--yellow);
+    color: var(--red);
     border-radius: 0.5rem;
     padding: 0 0.5rem;
     margin: 0 auto;

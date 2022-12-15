@@ -25,10 +25,10 @@ const CategorySelect = ({ setCategory, selectedCategory }) => {
         </button>
       ))}
       {isMobile && <select value={selectedCategory} onChange={e => setCategory(e.target.value)}>
-        <option value='all'>All products</option>
+        <option value='all'>All products{selectedCategory === 'all' ? '▾' : ''}</option>
         {categories.map(category => (
           <option key={category} value={category}>
-            {category}
+            {category}{selectedCategory === category ? '▾' : ''}
           </option>
         ))}
       </select>}
