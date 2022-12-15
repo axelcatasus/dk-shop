@@ -21,7 +21,7 @@ h1 {
 }
 
 a {
-  color: black;
+  color: var(--yellow);
   text-decoration: underline;
 }
 
@@ -37,6 +37,10 @@ a {
 }
 
 .page-container {
+  background: var(--red);
+  color: var(--yellow);
+  padding: 2rem;
+  border-radius: 1rem;
   display: grid;
   place-items: center;
   grid-template-columns: 1.5fr 1fr;
@@ -48,6 +52,7 @@ a {
     width: 100%;
     font-size: 2.5rem;
     text-align: center;
+    color: var(--yellow);
   }
 }
 
