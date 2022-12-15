@@ -1,12 +1,13 @@
 import * as React from "react"
-import { graphql } from 'gatsby'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import { graphql } from 'gatsby'
 import Header from '../components/Header'
 import '../scss/main.scss'
 
-const IndexPage = ({ data }) => {
-  const { allContentfulPage } = data
-  const { title, message, image } = allContentfulPage.nodes[0]
+const TemplatePage = ({ data }) => {
+  const { contentfulPage } = data
+  const { title, message, image } = contentfulPage
+
   return (
     <>
       <Header />
@@ -23,12 +24,13 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage
+export default TemplatePage
 
-export const IndexPageQuery = graphql`
-query IndexPageQuery {
-  allContentfulPage(filter: {pathName: {eq: "/"}}) {
-    nodes {
+
+export const TemplatePageQuery = graphql`
+  query ($id: String!) {
+    contentfulPage(id: { eq: $id }) {
+      id
       title
       message {
         raw
@@ -38,10 +40,8 @@ query IndexPageQuery {
           url
         }
       }
-      id
     }
   }
-}
 `
 
-export const Head = ({ data }) => <title>{data.allContentfulPage.nodes[0].title}</title>
+export const Head = ({ data }) => <title>{data.contentfulPage.title}</title>
