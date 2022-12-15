@@ -44,7 +44,7 @@ a {
   display: grid;
   place-items: center;
   grid-template-columns: 1.5fr 1fr;
-  margin-top: 1rem;
+  margin: 1rem 0rem;
 }
 
 .message-section {
@@ -58,14 +58,16 @@ a {
 
 .page-image {
   max-height: 50vh;
+  max-width: 100%;
 }
 
 @media (max-width: 1000px) {
   main, .page-main {
-    margin: 2rem;
+    margin: 1rem;
   }
   .page-container {
     grid-template-columns: 1fr;
+    padding: 0.5rem;
     .page-image {
       grid-row: 1;
       max-height: 80vh;
