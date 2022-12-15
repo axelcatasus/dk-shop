@@ -1,8 +1,8 @@
 import * as React from "react"
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { graphql } from 'gatsby'
-import Header from '../components/Header'
-import '../scss/main.scss'
+import Header from '../components/header/Header'
+import { pageMain, pageContainer, messageSection, pageTitle, pageImage } from './page.module.scss'
 
 const TemplatePage = ({ data }) => {
   const { contentfulPage } = data
@@ -11,13 +11,13 @@ const TemplatePage = ({ data }) => {
   return (
     <>
       <Header />
-      <main className="page-main">
-        <article className="page-container">
-          <section className="message-section">
-            <h1 className="page-title">{title}</h1>
+      <main className={pageMain}>
+        <article className={pageContainer}>
+          <section className={messageSection}>
+            <h1 className={pageTitle}>{title}</h1>
             {renderRichText(message)}
           </section>
-          <img className="page-image" src={image.file.url} alt={title} />
+          <img className={pageImage} src={image.file.url} alt={title} />
         </article>
       </main>
     </>
@@ -25,6 +25,7 @@ const TemplatePage = ({ data }) => {
 }
 
 export default TemplatePage
+export const Head = ({ data }) => <title>{data.contentfulPage.title}</title>
 
 
 export const TemplatePageQuery = graphql`
@@ -43,5 +44,3 @@ export const TemplatePageQuery = graphql`
     }
   }
 `
-
-export const Head = ({ data }) => <title>{data.contentfulPage.title}</title>

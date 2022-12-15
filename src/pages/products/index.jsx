@@ -1,9 +1,9 @@
 import * as React from "react"
 import { graphql } from 'gatsby'
-import ProductList from '../../components/ProductList'
-import ChangeView from '../../components/ChangeView'
-import CategorySelect from "../../components/CategorySelect"
-import Header from '../../components/Header'
+import ProductList from '../../components/products/product-list/ProductList'
+import ChangeView from '../../components/products/change-view/ChangeView'
+import CategorySelect from "../../components/products/category-select/CategorySelect"
+import Header from '../../components/header/Header'
 import { topSection, productsMain } from './products.module.scss'
 
 const ProductsPage = ({ data }) => {

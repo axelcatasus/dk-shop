@@ -1,24 +1,29 @@
 import * as React from "react"
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
+import Header from '../../components/header/Header'
+import { product, productTitle } from './product.module.scss'
 
 
 const SingleProductPage = ({ data }) => {
   const { contentfulProduct } = data
   return (
-    <main>
-      <Link to="/products">Back to products</Link>
-      <article>
-        <img 
-          src={contentfulProduct.image.file.url} 
-          alt={contentfulProduct.title}
-        />
-        <h1>{contentfulProduct.title}</h1>
-        <p>{contentfulProduct.price}</p>
-        <p>{contentfulProduct.description}</p>
-      </article>
-    </main>
+    <>
+      <Header />
+      <main>
+        <article className={product}>
+        <h1 className={productTitle}>{contentfulProduct.title}</h1>
+          <img 
+            src={contentfulProduct.image.file.url} 
+            alt={contentfulProduct.title}
+          />
+          <p>{contentfulProduct.price} 🍌</p>
+          <p>{contentfulProduct.description}</p>
+        </article>
+      </main>
+    </>
   )
 }
+
 export default SingleProductPage
 
 export const SingleProductPageQuery = graphql`
