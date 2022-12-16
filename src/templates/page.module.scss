@@ -1,0 +1,45 @@
+.page-main {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+  margin: 0 10rem;
+}
+
+.page-container {
+  background: var(--red);
+  color: var(--yellow);
+  padding: 2rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1.5fr 1fr;
+  margin: 1rem 0rem;
+}
+
+.message-section {
+  .page-title {
+    width: 100%;
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--yellow);
+  }
+}
+
+.page-image {
+  max-height: 50vh;
+  max-width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .page-main {
+    margin: 1rem;
+  }
+  .page-container {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    .page-image {
+      grid-row: 1;
+      max-height: 80vh;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.grid-button, .list-button {
+  border-radius: none;
+  background-color: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}
+
+.grid-button {
+  background: url(../../../images/grid.svg) no-repeat center;
+  background-size: 2rem
+}
+
+.list-button {
+  background: url(../../../images/list.svg) no-repeat center;
+  background-size: 2rem
+}

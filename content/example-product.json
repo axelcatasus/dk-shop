@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "tags": [
+    ]
+  },
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "dphdxqy6qqbr"
+      }
+    },
+    "id": "2NT4of47w030DBq1PPNU8r",
+    "type": "Entry",
+    "createdAt": "2022-12-13T11:21:02.982Z",
+    "updatedAt": "2022-12-14T12:46:12.404Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 9,
+    "publishedAt": "2022-12-14T12:46:12.404Z",
+    "firstPublishedAt": "2022-12-13T11:25:41.815Z",
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "1i7eLSP8CeJRJobSfkOYAc"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "1i7eLSP8CeJRJobSfkOYAc"
+      }
+    },
+    "publishedCounter": 2,
+    "version": 10,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "1i7eLSP8CeJRJobSfkOYAc"
+      }
+    },
+    "contentType": {
+      "sys": {
+        "type": "Link",
+        "linkType": "ContentType",
+        "id": "product"
+      }
+    }
+  },
+  "fields": {
+    "title": {
+      "en-US": "Donkey Kong"
+    },
+    "description": {
+      "en-US": "Donkey Kong, also shortened to DK, is a fictional gorilla in the Donkey Kong and Mario video game series, created by Shigeru Miyamoto."
+    },
+    "category": {
+      "en-US": [
+        "DKC",
+        "DK64",
+        "Kongs"
+      ]
+    },
+    "image": {
+      "en-US": {
+        "sys": {
+          "type": "Link",
+          "linkType": "Asset",
+          "id": "2JAd7DxDZn1hxbAKyC6ZzW"
+        }
+      }
+    },
+    "price": {
+      "en-US": 1000
+    },
+    "slug": {
+      "en-US": "donkey-kong"
+    }
+  }
+}

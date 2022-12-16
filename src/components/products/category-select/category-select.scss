@@ -1,0 +1,32 @@
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--red);
+  font-family: 'Jumpman';
+  font-size: 1.4rem;
+  height: fit-content;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.active {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  height: fit-content;
+  background: var(--red);
+  color: var(--yellow);
+  border-radius: 0.5rem;
+  transition: font-size 0.2s ease-in-out;
+}
+
+select {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--red);
+  font-family: 'Jumpman';
+  font-size: 1.5rem;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+}

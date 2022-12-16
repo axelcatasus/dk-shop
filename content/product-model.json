@@ -1,0 +1,127 @@
+{
+  "name": "Product",
+  "description": "",
+  "displayField": "title",
+  "fields": [
+    {
+      "id": "title",
+      "name": "Title",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "description",
+      "name": "Description",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "category",
+      "name": "Category",
+      "type": "Array",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false,
+      "items": {
+        "type": "Symbol",
+        "validations": [
+          {
+            "in": [
+              "DK64",
+              "DKC",
+              "Kongs",
+              "Kritters"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "image",
+      "name": "Image",
+      "type": "Link",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false,
+      "linkType": "Asset"
+    },
+    {
+      "id": "price",
+      "name": "Price",
+      "type": "Integer",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "slug",
+      "name": "Slug",
+      "type": "Symbol",
+      "localized": false,
+      "required": true,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    }
+  ],
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "dphdxqy6qqbr"
+      }
+    },
+    "id": "product",
+    "type": "ContentType",
+    "createdAt": "2022-12-13T11:09:36.281Z",
+    "updatedAt": "2022-12-15T20:06:41.182Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 15,
+    "publishedAt": "2022-12-15T20:06:41.182Z",
+    "firstPublishedAt": "2022-12-13T11:09:36.750Z",
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "1i7eLSP8CeJRJobSfkOYAc"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "1i7eLSP8CeJRJobSfkOYAc"
+      }
+    },
+    "publishedCounter": 8,
+    "version": 16,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "1i7eLSP8CeJRJobSfkOYAc"
+      }
+    }
+  }
+}
